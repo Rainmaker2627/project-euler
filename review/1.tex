@@ -1,0 +1,9 @@
+Let $S$ be the set of all numbers less than $n$ divisible by $3$ and $T$ be all the numbers less than $n$ that are divisible by $5$.
+By a fairly standard set-theoretic argument we know that
+$$\sum_{x\in S\cup T} x=\sum_{x\in S} x+\sum_{x\in T} x-\sum_{x\in S\cap T} x$$
+However the set $S\cap T$ is precicely the numbers divisibly by $3$ and $5$, in particular it is the set of numbers less than $n$ that
+are divisibly by $15$. Therefore if $T(n)=1+2+\dots+n$ we get the formulation
+$$\sum_{x\in S\cup T} x=\sum_{x=1}^{\lfloor n/3\rfloor} 3x+\sum_{x=1}^{\lfloor n/5\rfloor} 5x-\sum_{x=1}^{\lfloor n/15\rfloor} 15x=3T\left(\left\lfloor\frac{n}{3}\right\rfloor\right)+5T\left(\left\lfloor\frac{n}{5}\right\rfloor\right)-15T\left(\left\lfloor\frac{n}{15}\right\rfloor\right)$$
+and since $T$ has the nice closed-form solution
+$$T(n)=\frac{n(n+1)}{2}$$
+completing our analysis.

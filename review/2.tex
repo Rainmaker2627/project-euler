@@ -1,0 +1,14 @@
+Labelling $F_0=1$ and $F_1=1$, it is fairly simple to prove that
+$$F_n\mid F_m\iff n\mid m$$
+and therefore $2\mid F_m\iff 3\mid m$. In particular we need only consider the Fibonacci numbers who have an index divisible by 3.
+Using this fact, we may construct a recurrence for Fibonacci numbers separated by multiples of 3. Let $E_n=F_{3n}$. Then
+$$\begin{align*}
+F_{3n}&=F_{3n-1}+F_{3n-2}\\
+&=2F_{3n-2}+F_{3n-3}\\
+&=3F_{3n-3}+2F_{3n-4}\\
+&=3F_{3n-3}+F_{3n-4}+F_{3n-5}+F_{3n-6}\\
+&=4F_{3n-3}+F_{3n-6}\\
+E_n&=4E_{n-1}+E_{n-2}
+\end{align*}$$
+starting with $E_0=0$ and $E_1=2$. This gives us a very quick solution, especially considering the speed for which the
+Fibonacci numbers grow. 

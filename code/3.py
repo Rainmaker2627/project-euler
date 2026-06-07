@@ -1,0 +1,11 @@
+L=600851475143
+##################
+
+d,m=2,1
+while d*d<=L:
+    while L%d==0:
+        L//=d
+        m=max(m, d)
+    d+=1
+m=max(d, L)
+print(m)
