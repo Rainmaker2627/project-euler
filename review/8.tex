@@ -1,6 +1,0 @@
-This would be relatively easy without the zero. We can get around the zero by storing in an array the values of
-$$a_n, \quad a_na_{n-1}\quad a_na_{n-1}a_{n-2} \quad\dots\quad \underbrace{a_n\dots a_{n-N+1}}_{b_n}$$
-where here $N=13$. We then take the maximum of $b_n$ over all values $n\ge 12$. Perhaps a more interesting solution 
-(which I will not implement) is one in which you store a polynomial $p$ and define
-$$p_{n+1}(x)=\frac{x-a_{n+1}}{x-a_{x-12}}p_n(x)$$
-from which our answer is $\max_{n\ge 12} p_n(0)$.

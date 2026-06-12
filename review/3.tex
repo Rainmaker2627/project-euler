@@ -1,4 +1,0 @@
-There are many complicated algorithms, like Pollard's rho algorithm, but none are necessary now. We simply implement a version
-of trial division. We divide $n$ by every number not larger than $\sqrt{n}$. Then any divisor $d$ of $n$ in this range corresponds
-exactly to a divisor $n/d$ greater than $\sqrt n$. In particular we may find the prime divisors of $n$ in $\sqrt O(n)$ time.
-This suffices for our purposes.
